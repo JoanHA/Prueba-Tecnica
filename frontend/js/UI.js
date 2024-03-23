@@ -27,7 +27,7 @@ const operate = (operator) => {
   const number = document.querySelector("#screen-panel").value;
   const previewPanel = document.querySelector("#preview-panel");
   if (window.localStorage.getItem("n1")) 
-    return alert("Esta calculadora es solo para dos numeros.  \n Por favor dale '=' para ver tu resultado");
+    return console.error("Esta calculadora es solo para dos numeros.  \n Por favor dale '=' para ver tu resultado");
   
   window.localStorage.setItem("n1", number);
   window.localStorage.setItem("operator", operator);

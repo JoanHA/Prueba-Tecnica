@@ -10,7 +10,7 @@ if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === "POST") 
   $number1  = $_POST["number1"];
   $number2  = $_POST["number2"];
   $calculator = new Operators($number1,$number2);
-  //Veriificar la url del API con el endpoint correcto
+  //Verificar la url del API con el endpoint correcto
   switch ((array_filter($arrayRoutes)[3])) {
     case 'sumar':
       return  $calculator->sumar();
@@ -27,7 +27,7 @@ if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === "POST") 
     default:
       $json = array(
         "status"=>404,
-        "data" => "Ruta No encontrada"
+        "data" => "Ruta No Encontrada"
       );
       echo json_encode($json, true);
 

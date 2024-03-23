@@ -5,6 +5,7 @@ export class Operation {
       this.endpoint = endpoint;
   }
 
+  //Funcion para validar los datos de entrada
   validarDatos() {
       const numero1 = Math.abs(this.n1);
       const numero2 = Math.abs(this.n2);
@@ -21,13 +22,14 @@ export class Operation {
       return true;
   }
 
+  //Funcion para llamar el api dependiendo de la operacion
   async ejecutarOperacion(operacion) {
       if (!this.validarDatos()) return;
-      
       const formdata = { number1: Math.abs(this.n1), number2: Math.abs(this.n2) };
       return  await this.ajax(operacion, formdata);
   }
 
+  //Funcion ajax para consumir el API
   ajax(operacion, formdata) {
     return new Promise((resolve, reject) => {
         $.ajax({
