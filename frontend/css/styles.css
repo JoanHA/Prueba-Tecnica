@@ -63,7 +63,7 @@
 /* SCREEN */
 @font-face {
     font-family: digital-calc;
-    src: url("../fonts/digital-7.ttf");
+    src: url("../fonts/digital-7/digital-7\ \(mono\ italic\).ttf");
 }
 #screen-container{
     height: 99px;
@@ -75,7 +75,7 @@
 }
 #screen-panel{
     font-size: 70px;
-    font-family: digital-calc;
+    /* font-family: digital-calc; */
     border-top: none;
 }
 #preview-panel{

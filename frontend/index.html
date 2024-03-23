@@ -14,6 +14,11 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Prueba Técnica Calculadora</title>
   </head>
@@ -27,7 +32,7 @@
           <!-- Screen container -->
           <div class="p-2" id="screen-container">
             <div id="screen">
-                <input
+              <input
                 type="text"
                 disabled
                 class="form-control text-end"
@@ -36,7 +41,7 @@
               <input
                 type="text"
                 disabled
-                  placeholder="0"
+                placeholder="0"
                 class="w-100 h-100 rounded form-control text-end"
                 id="screen-panel"
               />
@@ -45,31 +50,33 @@
           <!-- Buttons container -->
           <form action="">
             <div class="row m-0 p-0 align-items-center justify-content-center">
-                <div class="col-6 math-buttons del" onclick="onDeleteAll()">AC</div>
-                <div class="col-6 math-buttons del" onclick="onDelete()">DEL</div>
-                <div class="col-3 buttons" onclick="onType('7')">7</div>
-                <div class="col-3 buttons" onclick="onType('8')">8</div>
-                <div class="col-3 buttons" onclick="onType('9')">9</div>
-                <div class="col-3  math-buttons" onclick="operate('+')">-</div>
-                <div class="col-3 buttons" onclick="onType('4')">4</div>
-                <div class="col-3 buttons" onclick="onType('5')">5</div>
-                <div class="col-3 buttons" onclick="onType('6')">6</div>
-                <div class="col-3 math-buttons" onclick="operate('+')">+</div>
-                <div class="col-3 buttons" onclick="onType('1')">1</div>
-                <div class="col-3 buttons" onclick="onType('2')">2</div>
-                <div class="col-3 buttons" onclick="onType('3')">3</div>
-                <div class="col-3  math-buttons" onclick="operate('+')">/</div>
-                <div class="col-3 buttons" onclick="onType('0')">0</div>
-                <div class="col-3 buttons" onclick="onType('.')">.</div>
-                <div class="col-3 math-buttons" id="equal-button" onclick="">=</div>
-                <div class="col-3 math-buttons" onclick="operate('+')">*</div>    
+              <div class="col-6 math-buttons del" onclick="onDeleteAll()">
+                AC
               </div>
+              <div class="col-6 math-buttons del" onclick="onDelete()">DEL</div>
+              <div class="col-3 buttons" onclick="onType('7')">7</div>
+              <div class="col-3 buttons" onclick="onType('8')">8</div>
+              <div class="col-3 buttons" onclick="onType('9')">9</div>
+              <div class="col-3 math-buttons" onclick="operate('-')">-</div>
+              <div class="col-3 buttons" onclick="onType('4')">4</div>
+              <div class="col-3 buttons" onclick="onType('5')">5</div>
+              <div class="col-3 buttons" onclick="onType('6')">6</div>
+              <div class="col-3 math-buttons" onclick="operate('+')">+</div>
+              <div class="col-3 buttons" onclick="onType('1')" >1</div>
+              <div class="col-3 buttons" onclick="onType('2')">2</div>
+              <div class="col-3 buttons" onclick="onType('3')">3</div>
+              <div class="col-3 math-buttons" onclick="operate('/')">/</div>
+              <div class="col-3 buttons" onclick="onType('0')">0</div>
+              <div class="col-3 buttons" onclick="onType('.')">.</div>
+              <div class="col-3 math-buttons" id="equal-button">=</div>
+              <div class="col-3 math-buttons" onclick="operate('*')">*</div>
+            </div>
           </form>
-         
         </div>
       </div>
     </main>
+
     <script src="./js/UI.js"></script>
-    <script src="./controllers/CalculateController.js"></script>
+    <script src="./controllers/CalculateController.js" type="module"></script>
   </body>
 </html>

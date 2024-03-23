@@ -1,6 +1,7 @@
 //Función para escribir en el panel
 const onType = (number) => {
   document.querySelector("#screen-panel").value += number;
+ 
 };
 
 //Función para borrar un digito del panel
@@ -17,6 +18,8 @@ const onDeleteAll = () => {
   document.querySelector("#screen-panel").value = "";
   document.querySelector("#preview-panel").value = "";
   window.localStorage.removeItem("n1")
+  window.localStorage.removeItem("operator");
+
 };
 
 //funcion para guardar los numeros a operar
@@ -27,6 +30,7 @@ const operate = (operator) => {
     return alert("Esta calculadora es solo para dos numeros.  \n Por favor dale '=' para ver tu resultado");
   
   window.localStorage.setItem("n1", number);
+  window.localStorage.setItem("operator", operator);
   document.querySelector("#screen-panel").value = "";
   previewPanel.value = number + " " + operator;
 };
