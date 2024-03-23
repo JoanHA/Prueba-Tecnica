@@ -9,11 +9,13 @@ import { Operation } from "../models/Operation.js";
     if (!n1) return console.error("Solo hay un valor, por favor escribe un numero");
     if (!n2) return console.error("Solo hay un valor, por favor escribe otro un numero");
 
+
+    const path = window.location.href.split("/")
     //llamar el modelo segun la operacion
     const operation = new Operation(
       n1,
       n2,
-      "http://localhost:8012/Prueba-Tecnica/api/"
+      `http://${path[2]}/${path[3]}/api/`,
     );
 
     //Funcion para llamar el modelo 
