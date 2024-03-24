@@ -22,7 +22,8 @@ body{
 /* BUTTONS */
 .math-buttons{
     padding: 6px;
-    background-color: #363636;
+    /* background-color: #363636; */
+    background-color: #0a0a0a;
     width: 20%;
     margin:4px;
     border-radius: 8px;
@@ -37,7 +38,8 @@ body{
    box-shadow: 4px 5px #6b6b6b;
 }
 .del{
-    background-color: rgba(250, 70, 70, 0.63);
+    /* background-color: rgba(250, 70, 70, 0.63); */
+    background-image: linear-gradient(rgb(244, 49, 99), rgb(251, 15, 76));
     width: 42%;
     height: 40px;
     padding: 0;
@@ -48,7 +50,7 @@ body{
 .buttons{
     cursor: pointer;
     padding: 6px;
-    background-color: #fff;
+    background-color:#ffffff;
     width: 20%;
     margin:4px;
     border-radius: 8px;
@@ -56,7 +58,7 @@ body{
     text-align: center;
     font-weight: 700;
     font-size: 31px;
-    color: #4b4a4a;
+    color: #0a0a0a;
    box-shadow: 4px 5px #8b8b8b;
    
 }
@@ -88,8 +90,10 @@ body{
     filter: brightness(90%);
 }
 #equal-button{
-    background-color: #ffb224;
-    color: #363636;
+    /* background-color: #ffb224; */
+    color: #0a0a0a;
+    background-color: rgb(246, 137, 102);
+    background-image: linear-gradient(rgb(246, 137, 102), rgb(253, 108, 27));
 }
 /* SCREEN */
 @font-face {
@@ -113,6 +117,7 @@ body{
 }
 #preview-panel{
     height: 10px; font-size: 10px;
+    font-family: digital-calc;
     border-top-left-radius: 10px !important;
     border-top-right-radius: 10px !important;
     box-shadow: 2px 4px #8b8b8b;
