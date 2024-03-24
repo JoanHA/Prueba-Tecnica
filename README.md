@@ -44,6 +44,78 @@ Dentro de esta carpeta vamos a abrir una terminal y clonar el repositorio con �
 
 
 Estructura del proyecto y diseño 
+API:
+
+El API del backend consiste en realizar las operaciones matemáticas (suma, resta, multiplicación y división) dependiendo el parámetro que se le añada al ENDPOINT y los datos enviados en el body.
+
+URL Base / Endpoint: http://localhost/Prueba-Tecnica/api/
+
+RUTAS:
+
+POST: /sumar
+
+Descripción:  suma los dos números que se le envíen en el body de la petición por el método post y devuelve el resultado.
+
+Body: Es obligatorio y recibe un objeto json asi: {number1: 20, number2: 10}
+
+Resultado: Al hacer los cálculos el API devolverá un string parecido a un objeto JSON tipo asi:
+
+En caso de éxito: {“status”: 200, “data”: 30}
+
+En caso de error: {“status”:400, “data”: “no pudimos realizar la operación, asegúrate que solo enviaste números”}
+
+Ruta completa: http://localhost/Prueba-Tecnica/api/sumar 
+
+
+
+POST: /restar
+
+Descripción:  resta los dos números que se le envíen en el body de la petición por el método post y devuelve el resultado.
+
+Body: Es obligatorio y recibe un objeto json así: {number1: 20, number2: 10}
+
+Resultado: Al hacer los cálculos el API devolverá un string parecido a un objeto JSON tipo así:
+
+En caso de éxito: {“status”: 200, “data”: 10}
+
+En caso de error: {“status”: 400, “data”: “no pudimos realizar la operación, asegúrate que solo enviaste números”}
+
+Ruta completa: http://localhost/Prueba-Tecnica/api/restar 
+
+POST: /dividir
+
+Descripción: divide los dos números que se le envíen en el body de la petición por el método post y devuelve el resultado.
+
+Body: Es obligatorio y recibe un objeto json así: {number1: 20, number2: 10}
+
+Resultado: Al hacer los cálculos el API devolverá un string parecido a un objeto JSON tipo así:
+
+En caso de éxito: {“status”: 200, “data”: 30}
+
+En caso de error: {“status”:400, “data”: “Error: No se puede dividir por 0”}
+
+Ruta completa: http://localhost/Prueba-Tecnica/api/dividir  
+
+POST: /multiplicar
+
+Descripción:  multiplica los dos números que se le envíen en el body de la petición por el método post y devuelve el resultado.
+
+Body: Es obligatorio y recibe un objeto json así: {number1: 20, number2: 10}
+
+Resultado: Al hacer los cálculos el API devolverá un string parecido a un objeto JSON tipo así:
+
+En caso de éxito: {“status”: 200, “data”: 30}
+
+En caso de error: {“status”:400, “data”: “no pudimos realizar la operación, asegúrate que solo enviaste números”}
+
+Ruta completa: http://localhost/Prueba-Tecnica/api/multiplicar  
+
+En caso de no encontrar la ruta o enviar un método que no se post se obtendrá este resultado 
+{
+	“status”: 404,
+	“data”: Error: Ruta no encontrada
+}
+
 Esta calculadora que utiliza el patrón Modelo-Vista-Controlador (MVC) y sigue los principios SOLID se organizaría de la siguiente manera:
 
 1. Modelo (Model):
