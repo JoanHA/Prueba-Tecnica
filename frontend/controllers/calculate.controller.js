@@ -1,4 +1,4 @@
-import { Operation } from "../models/Operation.js";
+import { Operation } from "../models/operation.model.js";
 
   document.querySelector("#equal-button").addEventListener("click", () => {
     //declarar constantes de numeros y operador
